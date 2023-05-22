@@ -26,16 +26,20 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
     }
     
     .item {
       width: 300px;
+      height: 350px;
       margin: 20px;
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       overflow: hidden;
       transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
     
     .item:hover {
@@ -50,6 +54,7 @@
     
     .item-content {
       padding: 20px;
+      flex-grow: 1;
     }
     
     .item h2 {
@@ -82,6 +87,27 @@
     .whatsapp-button:hover {
       background-color: #007b00;
     }
+    
+    @media (max-width: 992px) {
+      .item {
+        width: calc(33.33% - 40px);
+        margin: 20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .item {
+        width: calc(50% - 40px);
+        margin: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .item {
+        width: calc(100% - 40px);
+        margin: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -103,7 +129,48 @@
         image: "https://example.com/car2.jpg",
         whatsappLink: "https://wa.me/1234567890"
       },
-      // Add more items...
+      {
+        name: "Car 3",
+        description: "This is car 3. Vestibulum nec purus rhoncus, hendrerit dolor vitae, consequat sapien.",
+        image: "https://example.com/car3.jpg",
+        whatsappLink: "https://wa.me/1234567890"
+      },
+      {
+        name: "Car 4",
+        description: "This is car 4. Phasellus scelerisque enim non semper rhoncus.",
+        image: "https://example.com/car4.jpg",
+        whatsappLink: "https://wa.me/1234567890"
+      },
+      {
+        name: "Car 5",
+        description: "This is car 5. Nullam vel odio vitae nisl iaculis cursus.",
+        image: "https://example.com/car5.jpg",
+        whatsappLink: "https://wa.me/1234567890"
+      },
+      {
+        name: "Car 6",
+        description: "This is car 6. Aliquam erat volutpat. Sed dictum fermentum placerat.",
+        image: "https://example.com/car6.jpg",
+        whatsappLink: "https://wa.me/1234567890"
+      },
+      {
+        name: "Video 1",
+        description: "This is video 1. Nullam sit amet mi tincidunt, ullamcorper justo sed, faucibus dolor.",
+        image: "https://example.com/video1.jpg",
+        whatsappLink: "https://wa.me/1234567890"
+      },
+      {
+        name: "Video 2",
+        description: "This is video 2. Fusce vehicula augue vitae purus rutrum, nec sagittis ipsum pulvinar.",
+        image: "https://example.com/video2.jpg",
+        whatsappLink: "https://wa.me/1234567890"
+      },
+      {
+        name: "Video 3",
+        description: "This is video 3. Vestibulum ultricies nulla in magna tempus, vel convallis risus interdum.",
+        image: "https://example.com/video3.jpg",
+        whatsappLink: "https://wa.me/1234567890"
+      }
     ];
     
     function generateItemElements() {
