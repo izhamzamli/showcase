@@ -61,30 +61,6 @@
       color: #777;
       margin-bottom: 20px;
     }
-    
-    .whatsapp-button {
-      background-color: #25D366;
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      padding: 10px;
-      font-size: 24px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .whatsapp-button:hover {
-      background-color: #128C7E;
-      transform: scale(1.1);
-    }
-    
-    .whatsapp-icon {
-      font-size: 36px;
-    }
   </style>
 </head>
 <body>
@@ -92,29 +68,53 @@
   
   <div id="item-container"></div>
   
-  <a href="https://api.whatsapp.com/send?phone=1234567890" target="_blank" class="whatsapp-button">
-    <i class="whatsapp-icon fab fa-whatsapp"></i>
-  </a>
-  
-  <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
   <script>
     var items = [
       {
-        name: "Item 1",
-        description: "This is item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        name: "Car 1",
+        description: "This is car 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         image: "https://via.placeholder.com/300"
       },
       {
-        name: "Item 2",
-        description: "This is item 2. Ut tristique auctor dui ac malesuada.",
+        name: "Car 2",
+        description: "This is car 2. Ut tristique auctor dui ac malesuada.",
         image: "https://via.placeholder.com/300"
       },
       {
-        name: "Item 3",
-        description: "This is item 3. Morbi in urna quis turpis tristique cursus.",
+        name: "Car 3",
+        description: "This is car 3. Morbi in urna quis turpis tristique cursus.",
+        image: "https://via.placeholder.com/300"
+      },
+      {
+        name: "Car 4",
+        description: "This is car 4. Sed vitae eros quis ipsum dignissim hendrerit.",
+        image: "https://via.placeholder.com/300"
+      },
+      {
+        name: "Car 5",
+        description: "This is car 5. Phasellus at elit id nulla facilisis finibus.",
+        image: "https://via.placeholder.com/300"
+      },
+      {
+        name: "Car 6",
+        description: "This is car 6. Nulla condimentum justo id libero sollicitudin eleifend.",
+        image: "https://via.placeholder.com/300"
+      },
+      {
+        name: "Video 1",
+        description: "This is video 1. Nullam sit amet mi tincidunt, ullamcorper justo sed, faucibus dolor.",
+        image: "https://via.placeholder.com/300"
+      },
+      {
+        name: "Video 2",
+        description: "This is video 2. Fusce vehicula augue vitae purus rutrum, nec sagittis ipsum pulvinar.",
+        image: "https://via.placeholder.com/300"
+      },
+      {
+        name: "Video 3",
+        description: "This is video 3. Aliquam vulputate felis ac augue cursus, in aliquam velit sollicitudin.",
         image: "https://via.placeholder.com/300"
       }
-      // Add more items as needed
     ];
     
     function generateItemElements() {
