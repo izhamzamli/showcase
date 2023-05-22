@@ -4,10 +4,28 @@
     <title>Showcase Item Page</title>
     <style>
         /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .showcase-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
         .showcase-item {
             text-align: center;
-            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+
         .showcase-item img {
             width: 300px;
             height: 300px;
@@ -15,60 +33,50 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
+
+        .showcase-item h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .showcase-item p {
+            font-size: 16px;
+            color: #888888;
+            margin-bottom: 30px;
+        }
+
         .whatsapp-button {
             display: inline-block;
-            background-color: green;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
         }
     </style>
+    <script>
+        function openWhatsApp() {
+            var phoneNumber = "YOUR_PHONE_NUMBER";
+            var message = "I'm interested in the showcase item. Please provide more information.";
+            var whatsappURL = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
 </head>
 <body>
-    <div class="showcase-item">
-        <img src="path/to/your/image.jpg" alt="Showcase Item">
-        <h2>Showcase Item Title</h2>
-        <p>Description of the showcase item.</p>
-        <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=I'm%20interested%20in%20the%20showcase%20item.%20Please%20provide%20more%20information.">Contact via WhatsApp</a>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Showcase Item Page</title>
-    <style>
-        /* Add your custom styles here */
-        .showcase-item {
-            text-align: center;
-            margin: 50px auto;
-        }
-        .showcase-item img {
-            width: 300px;
-            height: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .whatsapp-button {
-            display: inline-block;
-            background-color: green;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="showcase-item">
-        <img src="path/to/your/image.jpg" alt="Showcase Item">
-        <h2>Showcase Item Title</h2>
-        <p>Description of the showcase item.</p>
-        <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=I'm%20interested%20in%20the%20showcase%20item.%20Please%20provide%20more%20information.">Contact via WhatsApp</a>
+    <div class="showcase-container">
+        <div class="showcase-item">
+            <img src="path/to/your/image.jpg" alt="Showcase Item">
+            <h2>Showcase Item Title</h2>
+            <p>Description of the showcase item.</p>
+            <a class="whatsapp-button" onclick="openWhatsApp()">Contact via WhatsApp</a>
+        </div>
     </div>
 </body>
 </html>
