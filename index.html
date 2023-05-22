@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +64,24 @@
       color: #777;
       margin-bottom: 20px;
     }
+    
+    .whatsapp-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .whatsapp-button:hover {
+      background-color: #007b00;
+    }
   </style>
 </head>
 <body>
@@ -73,48 +94,16 @@
       {
         name: "Car 1",
         description: "This is car 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        image: "https://via.placeholder.com/300"
+        image: "https://example.com/car1.jpg",
+        whatsappLink: "https://wa.me/1234567890"
       },
       {
         name: "Car 2",
         description: "This is car 2. Ut tristique auctor dui ac malesuada.",
-        image: "https://via.placeholder.com/300"
+        image: "https://example.com/car2.jpg",
+        whatsappLink: "https://wa.me/1234567890"
       },
-      {
-        name: "Car 3",
-        description: "This is car 3. Morbi in urna quis turpis tristique cursus.",
-        image: "https://via.placeholder.com/300"
-      },
-      {
-        name: "Car 4",
-        description: "This is car 4. Sed vitae eros quis ipsum dignissim hendrerit.",
-        image: "https://via.placeholder.com/300"
-      },
-      {
-        name: "Car 5",
-        description: "This is car 5. Phasellus at elit id nulla facilisis finibus.",
-        image: "https://via.placeholder.com/300"
-      },
-      {
-        name: "Car 6",
-        description: "This is car 6. Nulla condimentum justo id libero sollicitudin eleifend.",
-        image: "https://via.placeholder.com/300"
-      },
-      {
-        name: "Video 1",
-        description: "This is video 1. Nullam sit amet mi tincidunt, ullamcorper justo sed, faucibus dolor.",
-        image: "https://via.placeholder.com/300"
-      },
-      {
-        name: "Video 2",
-        description: "This is video 2. Fusce vehicula augue vitae purus rutrum, nec sagittis ipsum pulvinar.",
-        image: "https://via.placeholder.com/300"
-      },
-      {
-        name: "Video 3",
-        description: "This is video 3. Aliquam vulputate felis ac augue cursus, in aliquam velit sollicitudin.",
-        image: "https://via.placeholder.com/300"
-      }
+      // Add more items...
     ];
     
     function generateItemElements() {
@@ -139,6 +128,14 @@
         var descriptionElement = document.createElement("p");
         descriptionElement.textContent = item.description;
         contentElement.appendChild(descriptionElement);
+        
+        var whatsappButton = document.createElement("button");
+        whatsappButton.classList.add("whatsapp-button");
+        whatsappButton.innerHTML = "<i class='fab fa-whatsapp'></i>";
+        whatsappButton.addEventListener("click", function() {
+          window.open(item.whatsappLink, "_blank");
+        });
+        contentElement.appendChild(whatsappButton);
         
         container.appendChild(itemElement);
       });
