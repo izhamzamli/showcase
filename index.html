@@ -130,7 +130,7 @@
       // Replace the placeholder phone number with your own
       var phoneNumber = "1234567890";
       var whatsappLink = "https://api.whatsapp.com/send?phone=" + phoneNumber;
-      window.location.href = whatsappLink;
+      window.open(whatsappLink, "_blank");
     }
     
     generateItemElements();
