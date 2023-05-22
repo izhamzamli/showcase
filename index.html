@@ -8,6 +8,7 @@
       background-color: #f1f1f1;
       margin: 0;
       padding: 20px;
+      position: relative;
     }
     
     h1 {
@@ -55,12 +56,28 @@
       margin: 10px 0;
       color: #777;
     }
+    
+    #whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <h1>Item Showcase</h1>
   
   <div id="item-container"></div>
+  
+  <button id="whatsapp-button" onclick="redirectToWhatsApp()">Contact via WhatsApp</button>
   
   <script>
     var items = [
@@ -107,6 +124,13 @@
         
         container.appendChild(itemElement);
       });
+    }
+    
+    function redirectToWhatsApp() {
+      // Replace the placeholder phone number with your own
+      var phoneNumber = "1234567890";
+      var whatsappLink = "https://api.whatsapp.com/send?phone=" + phoneNumber;
+      window.location.href = whatsappLink;
     }
     
     generateItemElements();
