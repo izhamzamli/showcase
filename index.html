@@ -1,179 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Item Showcase</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      margin: 0;
-      padding: 20px;
-    }
-    
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 40px;
-    }
-    
-    #item-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      justify-items: center;
-      align-items: center;
-    }
-    
-    .item {
-      width: 100%;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-    
-    .item:hover {
-      transform: scale(1.05);
-    }
-    
-    .item img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-    
-    .item-content {
-      padding: 20px;
-    }
-    
-    .item h2 {
-      margin: 0;
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    
-    .item p {
-      margin: 0;
-      color: #777;
-      margin-bottom: 20px;
-    }
-    
-    .whatsapp-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: green;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    .whatsapp-button:hover {
-      background-color: #007b00;
-    }
-    
-    @media (min-width: 768px) {
-      #item-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    @media (min-width: 992px) {
-      #item-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  </style>
+    <title>Showcase Item Page</title>
+    <style>
+        /* Add your custom styles here */
+        .showcase-item {
+            text-align: center;
+            margin: 50px auto;
+        }
+        .showcase-item img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .whatsapp-button {
+            display: inline-block;
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <h1>Item Showcase</h1>
-  
-  <div id="item-container"></div>
-  
-  <script>
-    var items = [
-      {
-        name: "Car 1",
-        description: "This is car 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        image: "https://example.com/car1.jpg"
-      },
-      {
-        name: "Car 2",
-        description: "This is car 2. Ut tristique auctor dui ac malesuada.",
-        image: "https://example.com/car2.jpg"
-      },
-      {
-        name: "Car 3",
-        description: "This is car 3. Vestibulum nec purus rhoncus, hendrerit dolor vitae, consequat sapien.",
-        image: "https://example.com/car3.jpg"
-      },
-      {
-        name: "Car 4",
-        description: "This is car 4. Phasellus scelerisque enim non semper rhoncus.",
-        image: "https://example.com/car4.jpg"
-      },
-      {
-        name: "Car 5",
-        description: "This is car 5. Nullam vel odio vitae nisl iaculis cursus.",
-        image: "https://example.com/car5.jpg"
-      },
-      {
-        name: "Car 6",
-        description: "This is car 6. Aliquam erat volutpat. Sed dictum fermentum placerat.",
-        image: "https://example.com/car6.jpg"
-      },
-      {
-        name: "Video 1",
-        description: "This is video 1. Nullam sit amet mi tincidunt, ullamcorper justo sed, faucibus dolor.",
-        image: "https://example.com/video1.jpg"
-      },
-      {
-        name: "Video 2",
-        description: "This is video 2. Fusce vehicula augue vitae purus rutrum, nec sagittis ipsum pulvinar.",
-        image: "https://example.com/video2.jpg"
-      },
-      {
-        name: "Video 3",
-        description: "This is video 3. Vestibulum ultricies nulla in magna tempus, vel convallis risus interdum.",
-        image: "https://example.com/video3.jpg"
-      }
-    ];
-    
-    function generateItemElements() {
-      var container = document.getElementById("item-container");
-      
-      items.forEach(function(item) {
-        var itemElement = document.createElement("div");
-        itemElement.classList.add("item");
-        
-        var imageElement = document.createElement("img");
-        imageElement.src = item.image;
-        itemElement.appendChild(imageElement);
-        
-        var contentElement = document.createElement("div");
-        contentElement.classList.add("item-content");
-        itemElement.appendChild(contentElement);
-        
-        var nameElement = document.createElement("h2");
-        nameElement.textContent = item.name;
-        contentElement.appendChild(nameElement);
-        
-        var descriptionElement = document.createElement("p");
-        descriptionElement.textContent = item.description;
-        contentElement.appendChild(descriptionElement);
-        
-        container.appendChild(itemElement);
-      });
-    }
-    
-    generateItemElements();
-  </script>
+    <div class="showcase-item">
+        <img src="path/to/your/image.jpg" alt="Showcase Item">
+        <h2>Showcase Item Title</h2>
+        <p>Description of the showcase item.</p>
+        <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=I'm%20interested%20in%20the%20showcase%20item.%20Please%20provide%20more%20information.">Contact via WhatsApp</a>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Showcase Item Page</title>
+    <style>
+        /* Add your custom styles here */
+        .showcase-item {
+            text-align: center;
+            margin: 50px auto;
+        }
+        .showcase-item img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .whatsapp-button {
+            display: inline-block;
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-item">
+        <img src="path/to/your/image.jpg" alt="Showcase Item">
+        <h2>Showcase Item Title</h2>
+        <p>Description of the showcase item.</p>
+        <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=I'm%20interested%20in%20the%20showcase%20item.%20Please%20provide%20more%20information.">Contact via WhatsApp</a>
+    </div>
 </body>
 </html>
